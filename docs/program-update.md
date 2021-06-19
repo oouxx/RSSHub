@@ -1,4 +1,4 @@
-***
+* * *
 
 ## AMD
 
@@ -286,7 +286,8 @@
 
 <Route author="cielpy" example="/nvidia/webdriverupdate" path="/nvidia/webdriverupdate"/>
 
-<<<<<<< HEAD
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+
 ## Obsidian
 
 ### Announcements
@@ -297,12 +298,13 @@
 
 ### Release History
 
-<Route author="nczitzk" example="/onenotegem/release" path="/onenotegem/release"/>
-=======
+# <Route author="nczitzk" example="/onenotegem/release" path="/onenotegem/release"/>
+
 ## pageClass: routes
 
 # 程序更新
->>>>>>> 47c73b23a2b2469d4d97e5f2b1007d05468fb737
+
+> > > > > > > 47c73b23a2b2469d4d97e5f2b1007d05468fb737
 
 ## PlayStation
 
