@@ -2,6 +2,9 @@
     "/2047/:category?/:sort?": [
         "nczitzk"
     ],
+    "/2048/:id?": [
+        "nczitzk"
+    ],
     "/8world/:category?": [
         "nczitzk"
     ],
@@ -368,6 +371,7 @@
     "/xueqiu/snb/:id": [],
     "/xueqiu/hots": [],
     "/xueqiu/stock_comments/:id/:titleLength?": [],
+    "/xueqiu/livenews": [],
     "/greasyfork/:language/:domain?": [],
     "/gwern/:category": [],
     "/linkedkeeper/:type/:id?": [],
@@ -885,7 +889,10 @@
     "/uraaka-joshi": [],
     "/uraaka-joshi/:id": [],
     "/xici/:id?": [],
-    "/taoguba/index": [],
+    "/taoguba/bbs": [],
+    "/taoguba/jinghua": [],
+    "/taoguba/zongban": [],
+    "/taoguba/dianzan": [],
     "/taoguba/user/:uid": [],
     "/tophub/:id": [],
     "/vgtime/news": [],
@@ -1384,7 +1391,6 @@
     "/hackerone/hacktivity": [],
     "/hackerone/search/:search": [],
     "/cowlevel/element/:id": [],
-    "/2048/bbs/:fid": [],
     "/google/news/:category/:locale": [],
     "/p-articles/section/:section": [],
     "/p-articles/contributors/:author": [],
@@ -1691,6 +1697,15 @@
     "/chaping/news/:caty?": [],
     "/feixuew/:id?": [],
     "/1x/:category?": [],
+    "/91porny/recent-favorite": [],
+    "/91porny/hot-list": [],
+    "/91porny/recent-rating": [],
+    "/caoliu1024/asmr": [],
+    "/caoliu1024/dagaier": [],
+    "/caoliu1024/jishutaolun": [],
+    "/caoliu1024/zhongziyuanchuang": [],
+    "/caoliu1024/xinshidaidewomen": [],
+    "/caoliu1024/guochanyuanchuang": [],
     "/jx3/:caty?": [],
     "/gq/tw/:caty?/:subcaty?": [],
     "/qzcea/:caty?": [],
