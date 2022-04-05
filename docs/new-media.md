@@ -463,6 +463,32 @@ Country
 
 </Route>
 
+## Foresight News
+
+### 首页
+
+<Route author="nczitzk" example="/foresightnews" path="/foresightnews"/>
+
+### 文章
+
+<Route author="nczitzk" example="/foresightnews/article" path="/foresightnews/article">
+
+::: tip 提示
+
+**文章** 来自 **首页** 时间流，并筛除 **首页** 时间流中的 **快讯** 获得，所以 `limit` 参数不能按预期返回指定数目的文章。
+
+:::
+
+</Route>
+
+### 快讯
+
+<Route author="nczitzk" example="/foresightnews/news" path="/foresightnews/news"/>
+
+### 专栏
+
+<Route author="nczitzk" example="/foresightnews/column/1" path="/foresightnews/column/:id" :paramsDesc="['专栏 id, 可在专栏页 URL 中找到']"/>
+
 ## Global Disinformation Index
 
 ### Research
@@ -1298,6 +1324,30 @@ Supported sub-sites:
 
 <Route author="hillerliao" example="/8btc/news/flash" path="/8btc/news/flash"/>
 
+## 白话区块链
+
+### 首页
+
+<Route author="Fatpandac" example="/hellobtc/information/latest" path="/hellobtc/information/:channel?" :paramsDesc="['类型，可填 `latest` 和 `application` 及最新和应用，默认为最新']"/>
+
+### 快讯
+
+<Route author="Fatpandac" example="/hellobtc/news" path="/hellobtc/news"/>
+
+### 科普
+
+<Route author="Fatpandac" example="/hellobtc/kepu/latest" path="/hellobtc/kepu/:channel?" :paramsDesc="['类型，见下表，默认为最新']">
+
+| latest | bitcoin | ethereum | defi | inter_blockchain | mining | safety | satoshi_nakomoto | public_blockchain |
+| ------ | ------- | -------- | ---- | ---------------- | ------ | ------ | ---------------- | ----------------- |
+| 最新     | 比特币     | 以太坊      | DeFi | 跨链               | 挖矿     | 安全     | 中本聪              | 公链                |
+
+</Route>
+
+### 专栏
+
+<Route author="Fatpandac" example="/hellobtc/topic/276" path="/hellobtc/topic/:id" :paramsDesc="['专栏 ID，可在网址中获取']"/>
+
 ## 白鲸出海
 
 ### 首页最新帖子
@@ -1441,6 +1491,10 @@ Supported sub-sites:
 | 9  | 公里每小时      |
 
 </Route>
+
+### 快讯
+
+<Route author="Fatpandac" example="/chaping/newsflash" path="/chaping/newsflash"/>
 
 ## 城农 Growin' City
 
@@ -1811,7 +1865,7 @@ area 分区选项
 
 ### 首页
 
-<Route author="nczitzk Jeason0228" example="/guancha" path="/guancha/:caty?" :paramsDesc="['分类，见下表，默认为全部']">
+<Route author="nczitzk Jeason0228" example="/guancha" path="/guancha/:category?" :paramsDesc="['分类，见下表，默认为全部']">
 
 | 全部  | 评论 & 研究 | 要闻    | 风闻      | 热点新闻   | 滚动新闻    |
 | --- | ------- | ----- | ------- | ------ | ------- |
@@ -1831,7 +1885,7 @@ others = 热点新闻 + 滚动新闻
 
 ### 观学院
 
-<Route author="nczitzk" example="/guancha/member/recommend" path="/guancha/member/:caty?" :paramsDesc="['分类，见下表']">
+<Route author="nczitzk" example="/guancha/member/recommend" path="/guancha/member/:category?" :paramsDesc="['分类，见下表']">
 
 | 精选        | 观书堂   | 在线课     | 观学院      |
 | --------- | ----- | ------- | -------- |
@@ -2000,6 +2054,14 @@ others = 热点新闻 + 滚动新闻
 | 资讯   | 视频     | 电台     | 文章       |
 | ---- | ------ | ------ | -------- |
 | news | videos | radios | articles |
+
+</Route>
+
+### 标签
+
+<Route author="StevenRCE0" example="/gcores/tag/42/articles" path="/gcores/tag/:tag/:category?" :paramsDesc="['标签名，可在选定标签分类页面的 URL 中找到，如视觉动物——42', '分类名']" radar="1">
+
+分类名同上。
 
 </Route>
 
@@ -2592,13 +2654,13 @@ column 为 third 时可选的 category:
 | --- | ----- | ------ | ---------- | ---------- |
 | all | games | comics | publishing | tablegames |
 
-| 潮玩模型 | 影视         | 音乐    | 活动         | 设计     |
-| ---- | ---------- | ----- | ---------- | ------ |
-| toys | film-video | music | activities | design |
+| 卡牌    | 潮玩模型 | 影视         | 音乐    | 活动         |
+| ----- | ---- | ---------- | ----- | ---------- |
+| cards | toys | film-video | music | activities |
 
-| 科技         | 食品   | 爱心通道    | 动物救助    |
-| ---------- | ---- | ------- | ------- |
-| technology | food | charity | animals |
+| 设计     | 科技         | 食品   | 爱心通道    | 动物救助    |
+| ------ | ---------- | ---- | ------- | ------- |
+| design | technology | food | charity | animals |
 
 | 个人愿望   | 其他     |
 | ------ | ------ |
@@ -2623,6 +2685,22 @@ column 为 third 时可选的 category:
 ### 新闻
 
 <Route author="howel52" example="/jpmorganchase" path="/jpmorganchase"/>
+
+## 木木博客
+
+### 每天六十秒（60 秒）读懂世界
+
+<Route author="Fatpandac" example="/liulinblog/kuaixun" path="/liulinblog/kuaixun"/>
+
+### 科技新闻
+
+<Route author="Fatpandac" example="/liulinblog/itnews/seo" path="/liulinblog/itnews/:channel?" :paramsDesc="['频道，默认为互联网早报']">
+
+|   互联网早报  | 站长圈 |
+| :------: | :-: |
+| internet | seo |
+
+</Route>
 
 ## 鸟哥笔记
 
@@ -3326,7 +3404,7 @@ column 为 third 时可选的 category:
 
 ### 最新新闻
 
-根据维基新闻的[sitemap](https://zh.wikinews.org/wiki/Special:%E6%96%B0%E9%97%BB%E8%AE%A2%E9%98%85)获取新闻全文。目前仅支持中文维基新闻。 <Route author="KotoriK" example="/latest" path="/latest"></Route>
+根据维基新闻的[sitemap](https://zh.wikinews.org/wiki/Special:%E6%96%B0%E9%97%BB%E8%AE%A2%E9%98%85)获取新闻全文。目前仅支持中文维基新闻。 <Route author="KotoriK" example="/wikinews/latest" path="/wikinews/latest"/>
 
 ## 未名新闻
 
@@ -3632,12 +3710,12 @@ column 为 third 时可选的 category:
 
 ### 新闻
 
-<Route author="LogicJake" example="/mpaypass/news" path="/mpaypass/news"/>
+<Route author="LogicJake genghis-yang" example="/mpaypass/news" path="/mpaypass/news"/>
 
 ### 分类
 
 <Route author="zhuan-zhu" example="/mpaypass/main/policy" path="mpaypass/main/:type?"
-:paramsDesc="['新闻类型,类型可在URL中找到，类似policy，eye等，空或其他任意值展示最新新闻']"/>
+:paramsDesc="['新闻类型，类型可在URL中找到，类似`policy`，`eye`等，空或其他任意值展示最新新闻']"/>
 
 ## 亿欧网
 
@@ -3699,6 +3777,18 @@ column 为 third 时可选的 category:
 | 要闻     | 国内       | 国际       | 企业      | 品牌    | 外贸    | 政策     | 科技         | 流行      | 服装      | 家纺      |
 | ------ | -------- | -------- | ------- | ----- | ----- | ------ | ---------- | ------- | ------- | ------- |
 | newsyw | domestic | internal | company | brand | trade | policy | Technology | fashion | apparel | hometex |
+
+</Route>
+
+## 中国工人出版社
+
+### 新闻中心
+
+<Route author="nczitzk" example="/wp-china/news" path="/wp-china/news/:category?" :paramsDesc="['分类，见下表，默认为最新资讯']">
+
+| 最新资讯   | 专题报道    |
+| ------ | ------- |
+| latest | stories |
 
 </Route>
 
