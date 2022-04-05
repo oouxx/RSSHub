@@ -1,5 +1,11 @@
 * * *
 
+## BigQuant
+
+### 专题报告
+
+<Route author="nczitzk" example="/bigquant/collections" path="/bigquant/collections"/>
+
 ## CFD
 
 ### 每周股指派息调整 (GBP)
@@ -34,9 +40,27 @@
 
 <Route author="HenryQW" example="/finviz/news/AAPL" path="/finviz/news/:ticker" :paramsDesc="['股票代码']"/>
 
-## pageClass: routes
+## TokenInsight
 
-# 金融
+### 博客
+
+<Route author="fuergaosi233" example="/tokeninsight/blog" path="/tokeninsight/blog/:lang?" :paramsDesc="['语言，见下表，默认为简体中文']" />
+
+### 快讯
+
+<Route author="fuergaosi233" example="/tokeninsight/bulletin" path="/tokeninsight/bulletin/:lang?" :paramsDesc="['语言，见下表，默认为简体中文']" />
+
+### 报告
+
+<Route author="fuergaosi233" example="/tokeninsight/report" path="/tokeninsight/report/:lang?" :paramsDesc="['语言，见下表，默认为简体中文']">
+
+语言
+
+| 中文 | 英文 |
+| -- | -- |
+| zh | en |
+
+</Route>
 
 ## WEEX 华尔街见闻旗下全球投资线上品牌
 
@@ -341,11 +365,19 @@
 
 ### 沟通交流
 
-<Route author="nczitzk" example="/pbc/goutongjiaoliu" path="/pbc/goutongjiaoliu"/>
+<Route author="nczitzk" example="/gov/pbc/goutongjiaoliu" path="/gov/pbc/goutongjiaoliu"/>
 
 ### 货币政策司公开市场交易公告
 
-<Route author="nczitzk" example="/pbc/tradeAnnouncement" path="/pbc/tradeAnnouncement"/>
+<Route author="nczitzk" example="/gov/pbc/tradeAnnouncement" path="/gov/pbc/tradeAnnouncement"/>
+
+### 政策研究
+
+<Route author="Fatpandac" example="/gov/pbc/zcjl" path="/gov/pbc/zcjl"/>
+
+### 工作论文
+
+<Route author="Fatpandac" example="/gov/pbc/gzlw" path="/gov/pbc/gzlw"/>
 
 ## 中证网
 
