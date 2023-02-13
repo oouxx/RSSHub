@@ -9,6 +9,7 @@
   "scripts": {
     "start": "node lib/index.js",
     "dev": "cross-env NODE_ENV=dev nodemon --inspect lib/index.js",
+    "proxydev": "cross-env PROXY_URI=$PROXY_URI NODE_ENV=dev nodemon --inspect lib/index.js",
     "profiling": "NODE_ENV=production node --prof lib/index.js",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
@@ -29,6 +30,7 @@
     "jest-junit"
   ],
   "jest-junit" : {
+    "dev": "cross-env NODE_ENV=dev nodemon --inspect lib/index.js",
     "outputDirectory": "coverage"
   },
   "repository": {
