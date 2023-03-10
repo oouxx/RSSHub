@@ -10,7 +10,7 @@
     <th>涨停时间</th>
     <th>解析</th>
   </tr>
-  <% for(let j = 1; j < list[i].length - 1; j++){ %>
+  <% for(let j = 1; j < list[i].length; j++){ %>
   <tr>
     <td><%= list[i][j].name %></td>
     <td><%= list[i][j].price %></td>
