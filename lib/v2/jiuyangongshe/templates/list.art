@@ -1,0 +1,28 @@
+
+{{@ title }}
+<% for(let i = 0; i < list.length - 1; i++){ %>
+<p><%= list[i][0].reason %></p>
+<table>
+  <tr>
+    <th>股票名称</th>
+    <th>最新价</th>
+    <th>涨跌幅</th>
+    <th>涨停时间</th>
+    <th>解析</th>
+  </tr>
+  <% for(let j = 1; j < list[i].length - 1; j++){ %>
+  <tr>
+    <td><%= list[i][j].name %></td>
+    <td><%= list[i][j].price %></td>
+    <td><%= list[i][j].shares_range %></td>
+    <td><%= list[i][j].time %></td>
+    <td><%= list[i][j].expound %></td>
+  </tr>
+  <% } %>
+</table>
+
+<% } %>
+
+
+
+
